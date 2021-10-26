@@ -22,4 +22,19 @@ export TF_VAR_PUBLIC="<path_to_key>/id_rsa.pub"
 Note you should match the key names to the ones you created.
 
 
-## 
+## Deploy
+Run 
+
+* `terraform init`
+* `terraform plan`
+* `terrform apply`
+
+to destroy the environment run `terraform destroy`.
+
+This will deploy a single Centos 7 host in Digital Ocean with a random vulnerable image
+from [vulhub](https://github.com/vulhub/vulhub)
+
+You can login to the vulnerable host at the IP specfied for the newly created VM, using
+the SSH key generated and `root` user.
+
+WARNING: this VM is about as vulnerable as it gets! Be safe and don't reuse important keys!
